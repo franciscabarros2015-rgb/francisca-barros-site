@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* ===== CABEÇALHO E NAVEGAÇÃO ===== */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: rgb(245, 250, 242);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+header nav ul li a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* ===== SEÇÕES GERAIS ===== */
+section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #667eea;
+    text-align: center;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 15px;
+}
+
+section h3 {
+    font-size: 22px;
+    color: #764ba2;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* ===== SEÇÃO SOBRE MIM ===== */
+#sobre {
+    text-align: center;
+}
+
+.perfil-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px 0;
+    border: 5px solid #667eea;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+#sobre p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* ===== GALERIA DE PROJETOS ===== */
+#projetos {
+    padding: 40px 20px;
+}
+
+#projetos .projeto {
+    background: #f9f9f9;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-left: 5px solid #667eea;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projetos .projeto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+#projetos .projeto a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #667eea;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-weight: 500;
+}
+
+#projetos .projeto a:hover {
+    background: #764ba2;
+}
+
+/* ===== SEÇÃO DE CONTATO ===== */
+#contato {
+    max-width: 600px;
+}
+
+.formulario-contato {
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* ===== BOTÃO MODO ESCURO ===== */
+.dark-mode-btn {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-size: 14px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+    margin-left: 20px;
+}
+
+.dark-mode-btn:hover {
+    background: white;
+    color: #667eea;
+}
+
+/* ===== MODO ESCURO ===== */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background: linear-gradient(135deg, #333 0%, #555 100%);
+}
+
+body.dark-mode section {
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark-mode section h2 {
+    color: #bb86fc;
+    border-bottom-color: #bb86fc;
+}
+
+body.dark-mode section h3 {
+    color: #03dac6;
+}
+
+body.dark-mode section p {
+    color: #b0b0b0;
+}
+
+body.dark-mode #projetos .projeto {
+    background: #2a2a2a;
+    border-left-color: #bb86fc;
+}
+
+body.dark-mode #projetos .projeto a {
+    background: #bb86fc;
+}
+
+body.dark-mode #projetos .projeto a:hover {
+    background: #03dac6;
+}
+
+body.dark-mode .form-group label {
+    color: #e0e0e0;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+    background: #2a2a2a;
+    border-color: #555;
+    color: #e0e0e0;
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group textarea:focus {
+    border-color: #bb86fc;
+    box-shadow: 0 0 5px rgba(187, 134, 252, 0.3);
+}
+
+body.dark-mode .btn-submit {
+    background: linear-gradient(135deg, #bb86fc 0%, #03dac6 100%);
+}
+
+body.dark-mode .btn-submit:hover {
+    box-shadow: 0 5px 15px rgba(187, 134, 252, 0.4);
+}
+
+body.dark-mode footer {
+    color: #b0b0b0;
+}
+
+.btn-submit:active {
+    transform: translateY(-1px);
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 10px 0;
+    color: white;
+    font-size: 14px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    section {
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    .perfil-img {
+        width: 100px;
+        height: 70px;
+    }
+
+    #projetos .projeto {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    header nav ul {
+        gap: 5px;
+    }
+
+    header nav ul li a {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    section h2 {
+        font-size: 20px;
+    }
+
+    section h3 {
+        font-size: 18px;
+    }
+
+    section p {
+        font-size: 14px;
+    }
+
+    .perfil-img {
+        width: 120px;
+        height: 120px;
+    }
+}

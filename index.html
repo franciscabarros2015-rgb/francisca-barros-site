@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio - Desenvolvedor Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <nav>
+            <h1>FRANCISCA BARROS</h1>
+            <ul>
+                <li><a href="#sobre">SOBRE</a></li>
+                <li><a href="#projetos">PROJETOS</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+            </ul>
+            <button id="dark-mode-toggle" class="dark-mode-btn">escuro</button>
+        </nav>
+    </header>
+
+    <!-- SEÇÃO DE APRESENTAÇÃO -->
+    <section id="sobre">
+        <h2>SOBRE MIM</h2>
+        <img src="./PERFIL .jpeg" alt="Foto do Perfil" class="perfil-img">
+        <p>Sou discente do curso Tecnológo para Sistema de Internet! Estou sempre buscando aprender novas tecnologias para criar soluções inovadoras.</p>
+    </section>
+
+    <!-- GALERIA DE PROJETOS -->
+    <section id="projetos">
+        <h2>MEUS PROJETOS</h2>
+        
+        <article class="projeto">
+            <h3>Meu Primeiro Site</h3>
+            <p>Um site responsivo desenvolvido com HTML, CSS e JavaScript. Este projeto marca o início da minha jornada em desenvolvimento web, com foco em boas práticas e design moderno.</p>
+            <a href="https://github.com" target="_blank">VER NO GITHUB</a>
+        </article>
+
+        <article class="projeto">
+            <h3>Criação de aplicativo mobile</h3>
+            <p>Projeto para demonstrar habilidades em criação de interfaces interativas e responsivas.</p>
+            <a href="https://github.com" target="_blank">VER NO GITHUB</a>
+        </article>
+    </section>
+
+    <!-- SEÇÃO DE CONTATO -->
+    <section id="contato">
+        <h2>CONTATO</h2>
+        <form class="formulario-contato">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Seu email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone">
+            </div>
+
+            <div class="form-group">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>&copy; 2026 Meu Portfólio. Todos os direitos reservados.</p>
+        <p>Desenvolvido com dedicação durante atividade do curso de Tecnólogo para Sistema de Internet</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
